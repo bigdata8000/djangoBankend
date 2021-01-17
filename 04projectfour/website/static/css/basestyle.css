@@ -1,0 +1,20 @@
+body{
+    background-color: lightgray;
+    color: black;
+}
+
+footer{
+    text-align: center;
+    color: darkgray;
+}
+
+/* class in html = . in css */
+/* image class='dog' = .dog */
+
+.dog{
+    border-style: solid ;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+}

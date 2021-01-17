@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>django bankend</title>
+    <link rel="stylesheet" href="{% static 'css/basestyle.css' %}">
+</head>
+<body>
+    <img class="dog" src="{% static 'images/husky.jpg' %}" alt="small dog">
+    <header><h2><a href="/">My Personal Blog</a></h2></header>
+
+    <div class="container">
+        {% block content %}
+        {% endblock content %}
+    </div>
+
+    <br>
+    <footer>Henry Lam: Python Django, PostgreSQL, ChartJS.</footer>
+
+</body>
+</html>
