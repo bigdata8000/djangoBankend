@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>django</title>
+</head>
+<body>
+    <form action="{% url 'vrform' %}" method="POST">
+        {% csrf_token %}
+
+        <h4>Add your video request here</h4>
+
+        <label for="inputName">Video title</label>
+        {{ form.videoname }}<br><br>
+
+        <label for="comment">Details to be discussed in video</label><br>
+        {{ form.videodesc }}<br>
+
+        <button type="submit">Submit</button>    
+
+    </form>
+
+</body>
+</html>

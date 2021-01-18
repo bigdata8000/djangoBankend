@@ -1,0 +1,13 @@
+<h2>Video Request Page</h2>
+
+<div class="jumbotron">
+    <p>
+        <a href="{% url 'vrform' %}">Enter your video</a>
+    </p>
+</div>
+
+{% for v in videos %}
+    {{ v.videotitle }}<br>
+    {{ v.videodesc }}<br>
+    <hr>
+{% endfor %}
