@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class='details'> 
+    <h2>{{ magic.title }}</h2>
+    <p>{{ magic.text }}</p>
+</div>
+
+<h4><a href="{% url 'article_edit' magic.pk %}">Edit this post</a></h4>
+<h4><a href="{% url 'article_delete' magic.pk %}">Delete this post</a></h4>
+
+{% endblock content %}

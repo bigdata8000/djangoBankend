@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    {% for z in object_list  %}
+        <a href="{% url 'detail' z.pk %}">{{ z.title }}</a> <br>
+        {{ z.text }} <br>
+        <hr>
+    {% endfor %}
+
+{% endblock content %}
