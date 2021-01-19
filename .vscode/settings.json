@@ -1,4 +1,4 @@
 {
-    "python.pythonPath": "/Users/henry/opt/anaconda3/envs/myDjangoEnv/bin/python",
+    "python.pythonPath": "/usr/bin/python3",
     "python.linting.enabled": false
 }

@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>django bankend</title>
+    <link rel="stylesheet" href="{% static 'css/basestyle.css' %}">
+</head>
+<body>
+    <img class="dog" src="{% static 'images/husky.jpg' %}" alt="small dog">
+    <header><h2><a href="/">My Personal Blog</a></h2></header>
+
+    <div class="container">
+        {% if user.is_authenticated %}
+            <p>You are logged in as: {{ user.username }}</p>
+            <p>Remember to <a href="{% url 'logout' %}">Logout</a></p>
+        {% else %}
+            <p>You are not logged in</p>
+            <p>Please <a href="{% url 'login' %}">Login</a></p>
+        {% endif %}
+            <hr>
+
+
+        {% block content %}
+        {% endblock content %}
+    </div>
+
+    <br>
+    <footer>Henry Lam: Python Django, PostgreSQL, ChartJS.</footer>
+
+</body>
+</html>
